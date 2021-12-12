@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/8a206a71da.js" crossorigin="anonymous "></script>
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="shorcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/media.min.css">
 
     <title>Эхлэл | ГЭРЛЭЭР ТЭТГЭГЧ</title>
 </head>
@@ -18,19 +19,21 @@
             <div class="container">
                 <nav id="contact--nav">
                     <div class="nav">
-                        <img src="./img/logoo.png" style="height: 80px; width: 80px;" alt="">
-                        <h1>ГЭРЛЭЭР ТЭТГЭГЧ ХХК</h1>
+                        <a href="./index.html">
+                            <img src="./img/logoo.png" style="height: 80px; width: 80px;" alt="">
+                            <h1>ГЭРЛЭЭР ТЭТГЭГЧ ХХК</h1>
+                        </a>
                     </div>
                     <div class="contact">
                         <i class="fas fa-phone-alt fa-2x"></i>
-                        <h5> Утас:</h5>
+                        <h5> Утас : </h5>
                         <p>
-                            7000849, 88076752, 88064204
+                            70008499, 88076752, 88064204
                         </p>
                     </div>
                     <div class="email">
                         <i class="fas fa-envelope fa-2x"></i>
-                        <h5> Цахим хаяг :</h5>
+                        <h5> Цахим хаяг : </h5>
                         <p>Lorem, ipsum.</p>
                     </div>
                 </nav>
@@ -39,13 +42,18 @@
         <header id="navbar--header">
             <div class="container">
                 <nav id="navbar">
-                    <ul>
+                    <ul class="nav-menu">
                         <li><a href="#" class="active"> Нүүр</a></li>
                         <li><a href="./about.html"> Бидний тухай</a></li>
                         <li><a href="./services.html">Үйлчилгээ</a></li>
                         <li><a href="./content.html"> Мэдээ мэдээлэл</a></li>
                         <li><a href="./contact.html"> Холбоо барих</a></li>
                     </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -56,7 +64,7 @@
             <div class="container">
                 <div class="showcase-content">
                     <h1>Бид таны ирээдүйн амьдралын баталгаа</h1>
-                    <a href="./about.html" class="">Бидэнтэй холбогдох</a>
+                    <a href="./contact.html" class="">Бидэнтэй холбогдох</a>
                 </div>
                 <div class="contact-box top-anim">
                     <a href="./about.html">
@@ -100,7 +108,8 @@
         <div class="index-gallery">
             <div class="container">
                 <div class="index-slider">
-                    <h2 class="main-color text-center ">Бидний зургийн цомог</h2>
+                    <h2 class=" text-center">Бидний зургийн цомог</h2>
+                    <div class="bottom-line"></div>
                     <div id="slider">
                         <ul id="slideWrap">
                             <li><img src="./img/security/15935414_1355676064454342_1313967825_o.jpg" alt="our"></li>
@@ -119,8 +128,43 @@
         </div>
 
     </section>
+    <div class="border-top"></div>
 
 
+
+    <section id="map">
+        <div class="container">
+            <h2>Бидний хаяг</h2>
+            <div class="bottom-line"></div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="800" height="600" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Apartment%208,%20Peace%20Avenue,%20Ulaanbaatar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <style>
+                        .mapouter {
+                            margin: 2rem;
+                            position: relative;
+                            text-align: right;
+                            height: 600px;
+                            width: 800px;
+
+                        }
+                    </style>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 600px;
+                            width: 800px;
+                            display: block;
+                            margin: 0 auto;
+
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -177,7 +221,7 @@
                     </li>
                     <li>
                         <i class="fas fa-phone-alt"></i>
-                        <p> &nbsp; Холбогдох :7000849, 88076752, 88064204</p>
+                        <p> &nbsp; Холбогдох утас : 70008499, 88076752, 88064204</p>
                     </li>
                     <li> <i class="fas fa-envelope"></i>
                         <p> &nbsp; Цахим шуудан : Одоогоор байхгүй</p>
@@ -197,7 +241,6 @@
     <!-- slider js -->
     <script>
         var responsiveSlider = function () {
-
             var slider = document.getElementById("slider");
             var sliderWidth = slider.offsetWidth;
             var slideList = document.getElementById("slideWrap");
